@@ -1,4 +1,5 @@
 {
+
   "extends": "tslint:recommended",
   "rules": {
     "align": {
@@ -99,8 +100,7 @@
       "call-signature"
     ],
     "typedef-whitespace": {
-      "options": [
-        {
+      "options": [{
           "call-signature": "nospace",
           "index-signature": "nospace",
           "parameter": "nospace",
