@@ -62,6 +62,58 @@
     margin-left: 10px;
   }
 
+  .lastPageInput input[type=checkbox] + label {
+    margin: 0.2em;
+  cursor: pointer;
+  padding: 0.2em;
+  }
+  
+  .lastPageInput input[type=checkbox] {
+  display: none;
+  }
+  .gray{
+    background-color: gray;
+  }
+  .lastPageInput input[type=checkbox] + label:before {
+    content: "\2714";
+    border: 0.05em solid gray;
+    border-radius: 0.2em;
+    display: inline-block;
+    width: 1.28em;
+    height: 0.75em;
+    padding-left: 0.3em;
+    padding-bottom: 1em;
+    margin-right: 0.5em;
+    vertical-align: bottom;
+    color: white;
+    opacity: 1;
+    transition: .2s;
+  }
+  
+  
+  .lastPageInput input[type=checkbox] + label:active:before {
+  transform: scale(0);
+  }
+  
+  input[type=checkbox]:checked + label:before {
+  background-color: MediumSeaGreen;
+  border-color: MediumSeaGreen;
+  color: #fff;
+  }
+  
+  input[type=checkbox]:disabled + label:before {
+  transform: scale(1);
+  border-color: #aaa;
+  }
+  
+  .lastPageInput input[type=checkbox]:checked:disabled + label:before {
+  transform: scale(1);
+  background-color: #bfb;
+  border-color: #bfb;
+  }
+  
+  
+
 }
 
 @media only screen and (min-width: 700px) {

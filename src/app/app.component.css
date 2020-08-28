@@ -16,7 +16,12 @@
   height: 60px;
 }
 
+@media only screen and (max-width: 600px) {
+  ::ng-deep .mat-horizontal-stepper-header-container .mat-horizontal-stepper-header {
+    display: none;
+  }
+}
 
 ::ng-deep .mat-horizontal-stepper-header-container .mat-horizontal-stepper-header {
-  padding: 0 10px;
+  padding: 0 4px;
 }
