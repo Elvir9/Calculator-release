@@ -235,6 +235,7 @@
 }
 
 .headline {
+  height: 155px;
   text-align: center;
   /* border-bottom: 0.5px solid #2C2C2C; */
   padding: 10px;
