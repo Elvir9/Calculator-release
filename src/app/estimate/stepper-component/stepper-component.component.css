@@ -493,14 +493,14 @@ code {
 
 .lastPageInput input[type=checkbox]+label:before {
   content: "\2714";
-  border: 0.1em solid #000;
+  border: 0.05em solid gray;
   border-radius: 0.2em;
   display: inline-block;
   width: 1.28em;
-  height: 1.2em;
+  height: 0.75em;
   padding-left: 0.3em;
-  padding-bottom: 0.6em;
-  margin-right: 0.2em;
+  padding-bottom: 1em;
+  margin-right: 0.5em;
   vertical-align: bottom;
   color: white;
   opacity: 1;
