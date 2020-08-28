@@ -1,3 +1,4 @@
+
 @media (min-width:300px) and (max-width: 599px) {
   .headline>h4 {
     margin: 8px 0 0 0;
@@ -10,16 +11,25 @@
     flex-direction: row;
     justify-content: space-around;
     align-content: center;
-    padding: 5px 10px;
+    /* padding: 15px; */
     /* max-width: 550px; */
   }
 
   .buttons-container>button {
     padding: 0px;
   }
+
+  /* .button{
+    margin:2.5%;
+  } */
 }
 
 @media only screen and (max-width: 600px) {
+.headline{
+  min-width: 320px;
+  min-height: 120px;
+}
+
   .buttons-container {
     background-color: white;
     display: flex;
@@ -48,8 +58,10 @@
   
   .button{
     min-width: 100px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    margin-left: 10px;
   }
+  
 }
 
 @media only screen and (min-width: 700px) {
@@ -57,6 +69,9 @@
     background-color: #3C454C;
     /* height: 62vh; */
     max-height: 300px;
+  }
+  .button{
+    margin-right: 0px;
   }
 
   .mat-horizontal-stepper-header {
@@ -80,10 +95,35 @@
     max-width: 550px;
   
   }
+  .button{
+    margin-right: 5%;
+  }
 
 }
 
 @media only screen and (min-width: 300px) and (max-width: 700px) {
+  .buttons-container {
+    background-color: white;
+    /* border: 1px solid white; */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: center;
+    padding: 5px 10px;
+    /* position: absolute; */
+    /* border-top: 1px solid rgba(248, 245, 245, 0.12); */
+    /* position: fixed; */
+    max-width: 550px;
+  
+  }
+  .button:hover {
+    background-color: rgb(0, 200, 83) !important;
+    border:2px solid rgb(0, 200, 83) !important;
+    box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.16),
+    0px 7px 8px 7px rgba(0, 0, 0, 0.23);
+    color:black;
+  }
+  
   .mat-stepper-horizontal {
     background-color: #3C454C;
     /* height: 62vh; */
@@ -99,6 +139,7 @@
     align-items: center;
     padding: 0 10px;
   }
+  
 }
 
 .emailForm {
@@ -242,7 +283,7 @@
   display: block;
   /* margin: 10px; */
   margin: 0px auto;
-  margin-top: 10px;
+  margin-top: 8px;
   position: relative;
   height: 8%;
   width: 95%;
@@ -261,7 +302,8 @@
   text-align: left;
   color: #202325;
   cursor: pointer;
-  background-color: rgb(230, 227, 227);
+  background-color: rgb(248, 248, 248);
+  border: 0.2px solid gray;
   z-index: 2;
   -webkit-transition: color 200ms ease-in;
   transition: color 200ms ease-in;
@@ -480,6 +522,9 @@ background-color: #bfb;
 border-color: #bfb;
 }
 
+.emailForm h2{
+  margin-bottom: 15px;
+}
 /* ::ng-deep .mat-horizontal-stepper-header-container {
   border: solid 1px red; 
 } */
