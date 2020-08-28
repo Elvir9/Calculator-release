@@ -21,7 +21,7 @@ export class UsersService {
             usersName: name,
             usersEmail: email,
         }
-        this.http.post<{message: string}>('http://localhost:3000/api/user', userAnswer)
+        this.http.post<{message: string}>('api/user', userAnswer)
             .subscribe((responseData) => {
                 console.log('Message: ' + responseData.message);
                 this.usersAnswers.push(userAnswer);
@@ -31,7 +31,7 @@ export class UsersService {
             });
         });
 
-        this.http.post("http://localhost:3000/sendmail", userAnswer).subscribe(
+        this.http.post("sendmail", userAnswer).subscribe(
             data => {
                 let res:any = data;
                 console.log(

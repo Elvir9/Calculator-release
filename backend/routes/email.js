@@ -19,12 +19,13 @@ routerEmail.post("", (req, res) => {
 });
 
 async function sendMail(user, callback) {
-       let userQuestions = [];
-       let counter = 1;
+    let userQuestions = [];
+    let counter = 1;
 
-        for (let i of user.answer) {
-            userQuestions.push([` <div>${counter++}.${i['questionName']}</div> - Answer: ${i.answer}`]);
-        }
+    for (let i of user.answer) {
+        userQuestions.push([` <div>&#128578;  ${counter++}.${i['questionName']} --- Answer: ${i.answer}</div>`]);
+    }
+
 
 
     // create reusable transporter object using the default SMTP transport
@@ -41,7 +42,7 @@ async function sendMail(user, callback) {
         from: '"Tech387 - App Estimation"<technodemailer@gmail.com>', // sender address
         to: `support@tech387.com , ${user.usersEmail}`, // list of receivers
         subject: "Regards from Tech387 Team - Here is your app estimation", // Subject line
-        html: `<h1>Hi ${user.usersName}</h1><br>
+        html: `<h2>Hi ${user.usersName}</h2><br>
                 <p>This email is to let you know your bill estimate.</p>
                 <p>Each project is a little bit different. Our software cost calculator can help you get a ballpark figure.
                  Tech 387 will call you to fine tune your quote so that you are not payinh for things you don't want or need.</p> <br>
@@ -49,11 +50,14 @@ async function sendMail(user, callback) {
                 <p style="font-size: 20px">Estimated project time</p><p style="font-size: 22px; font-weight: bold"> ${user.estimatedTime} hours.</p> <br>
                 <p style="font-size: 20px">Estimated project price</p><p style="font-size: 22px; font-weight: bold">USD ${user.estimatedPrice}.</p> <br> <br>
                 <p>Project features: </p>
-          ${userQuestions}
-          <p>Please contact us with any questions, we are always happy to help.</p><br>
+
+          <p>${userQuestions.join(' ')}</p>
+          <br><br><br>
+          <p>Please<a href="mailto:support@tech387.com"> contact us</a> with any questions, we are always happy to help.</p><br>
+
           <p>Cheers, </p>
           <p>Tech 387</p>`
-          
+
     };
 
     // send mail with defined transport object
@@ -71,3 +75,5 @@ async function sendMail(user, callback) {
 
 
 module.exports = routerEmail;
+
+
