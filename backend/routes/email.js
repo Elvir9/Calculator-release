@@ -28,7 +28,6 @@ async function sendMail(user, callback) {
 
 
 
-
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
         service: 'Gmail',
@@ -51,9 +50,11 @@ async function sendMail(user, callback) {
                 <p style="font-size: 20px">Estimated project time</p><p style="font-size: 22px; font-weight: bold"> ${user.estimatedTime} hours.</p> <br>
                 <p style="font-size: 20px">Estimated project price</p><p style="font-size: 22px; font-weight: bold">USD ${user.estimatedPrice}.</p> <br> <br>
                 <p>Project features: </p>
+
           <p>${userQuestions.join(' ')}</p>
           <br><br><br>
           <p>Please<a href="mailto:support@tech387.com"> contact us</a> with any questions, we are always happy to help.</p><br>
+
           <p>Cheers, </p>
           <p>Tech 387</p>`
 
