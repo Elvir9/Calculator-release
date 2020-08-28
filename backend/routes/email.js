@@ -23,7 +23,7 @@ async function sendMail(user, callback) {
        let counter = 1;
 
         for (let i of user.answer) {
-            userQuestions.push([` <div>${counter++}.${i['questionName']} --- Answer: ${i.answer}</div>`]);
+            userQuestions.push([` <div>${counter++}.${i['questionName']}</div> - Answer: ${i.answer}`]);
         }
 
 
@@ -49,8 +49,7 @@ async function sendMail(user, callback) {
                 <p style="font-size: 20px">Estimated project time</p><p style="font-size: 22px; font-weight: bold"> ${user.estimatedTime} hours.</p> <br>
                 <p style="font-size: 20px">Estimated project price</p><p style="font-size: 22px; font-weight: bold">USD ${user.estimatedPrice}.</p> <br> <br>
                 <p>Project features: </p>
-          <p>${userQuestions}</p>
-          <br><br><br>
+          ${userQuestions}
           <p>Please contact us with any questions, we are always happy to help.</p><br>
           <p>Cheers, </p>
           <p>Tech 387</p>`
